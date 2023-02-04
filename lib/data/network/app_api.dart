@@ -1,5 +1,5 @@
 import 'package:code/app/constants.dart';
-import 'package:code/data/responses.dart';
+import 'package:code/data/response/responses.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/http.dart';
 
