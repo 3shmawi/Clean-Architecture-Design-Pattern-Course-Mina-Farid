@@ -1,5 +1,5 @@
-import 'package:code/presentation/z_resources/styles_manager.dart';
-import 'package:code/presentation/z_resources/values_manager.dart';
+import 'package:code/presentation/_resources/styles_manager.dart';
+import 'package:code/presentation/_resources/values_manager.dart';
 import 'package:flutter/material.dart';
 
 import 'color_manager.dart';

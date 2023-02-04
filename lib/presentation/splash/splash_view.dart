@@ -2,10 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-import '../z_resources/assets_manager.dart';
-import '../z_resources/color_manager.dart';
-import '../z_resources/constants_manager.dart';
-import '../z_resources/routes_manager.dart';
+import '../_resources/assets_manager.dart';
+import '../_resources/color_manager.dart';
+import '../_resources/constants_manager.dart';
+import '../_resources/routes_manager.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({Key? key}) : super(key: key);
@@ -35,8 +35,13 @@ class SplashViewState extends State<SplashView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorManager.primary,
-      body:
-          const Center(child: Image(image: AssetImage(ImageAssets.splashLogo))),
+      body: const Center(
+        child: Image(
+          image: AssetImage(
+            ImageAssets.splashLogo,
+          ),
+        ),
+      ),
     );
   }
 

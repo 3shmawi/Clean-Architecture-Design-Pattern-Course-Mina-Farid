@@ -4,10 +4,10 @@ class MainView extends StatefulWidget {
   const MainView({Key? key}) : super(key: key);
 
   @override
-  _MainViewState createState() => _MainViewState();
+  MainViewState createState() => MainViewState();
 }
 
-class _MainViewState extends State<MainView> {
+class MainViewState extends State<MainView> {
   @override
   Widget build(BuildContext context) {
     return Container();

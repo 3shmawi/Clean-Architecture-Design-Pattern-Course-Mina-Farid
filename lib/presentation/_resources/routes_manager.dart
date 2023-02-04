@@ -1,10 +1,10 @@
-import 'package:code/presentation/z_resources/strings_manager.dart';
+import 'package:code/presentation/_resources/strings_manager.dart';
 import 'package:flutter/material.dart';
 
 import '../forgot_password/forgot_password_view.dart';
 import '../login/login_view.dart';
 import '../main/main_view.dart';
-import '../onboard/onboard_view.dart';
+import '../onboard/view/on_boarding_view.dart';
 import '../register/register_view.dart';
 import '../splash/splash_view.dart';
 import '../store_details/store_details_view.dart';
