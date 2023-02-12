@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of '../response/responses.dart';
+part of 'responses.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
@@ -16,20 +16,6 @@ Map<String, dynamic> _$BaseResponseToJson(BaseResponse instance) =>
       'message': instance.message,
     };
 
-ContactsResponse _$ContactsResponseFromJson(Map<String, dynamic> json) =>
-    ContactsResponse(
-      json['phone'] as String?,
-      json['email'] as String?,
-      json['link'] as String?,
-    );
-
-Map<String, dynamic> _$ContactsResponseToJson(ContactsResponse instance) =>
-    <String, dynamic>{
-      'phone': instance.phone,
-      'email': instance.email,
-      'link': instance.link,
-    };
-
 CustomerResponse _$CustomerResponseFromJson(Map<String, dynamic> json) =>
     CustomerResponse(
       json['id'] as String?,
@@ -42,6 +28,20 @@ Map<String, dynamic> _$CustomerResponseToJson(CustomerResponse instance) =>
       'id': instance.id,
       'name': instance.name,
       'numOfNotifications': instance.numOfNotifications,
+    };
+
+ContactsResponse _$ContactsResponseFromJson(Map<String, dynamic> json) =>
+    ContactsResponse(
+      json['phone'] as String?,
+      json['email'] as String?,
+      json['link'] as String?,
+    );
+
+Map<String, dynamic> _$ContactsResponseToJson(ContactsResponse instance) =>
+    <String, dynamic>{
+      'phone': instance.phone,
+      'email': instance.email,
+      'link': instance.link,
     };
 
 AuthenticationResponse _$AuthenticationResponseFromJson(
@@ -64,4 +64,20 @@ Map<String, dynamic> _$AuthenticationResponseToJson(
       'message': instance.message,
       'customer': instance.customer,
       'contacts': instance.contacts,
+    };
+
+ForgotPasswordResponse _$ForgotPasswordResponseFromJson(
+        Map<String, dynamic> json) =>
+    ForgotPasswordResponse(
+      json['support'] as String?,
+    )
+      ..status = json['status'] as int?
+      ..message = json['message'] as String?;
+
+Map<String, dynamic> _$ForgotPasswordResponseToJson(
+        ForgotPasswordResponse instance) =>
+    <String, dynamic>{
+      'status': instance.status,
+      'message': instance.message,
+      'support': instance.support,
     };

@@ -1,13 +1,13 @@
-import 'package:code/presentation/_resources/strings_manager.dart';
+import 'package:code/presentation/login/view/login_view.dart';
+import 'package:code/presentation/main/main_view.dart';
+import 'package:code/presentation/onboarding/view/onboarding_view.dart';
+import 'package:code/presentation/register/register_view.dart';
+import 'package:code/presentation/resources/strings_manager.dart';
+import 'package:code/presentation/splash/splash_view.dart';
+import 'package:code/presentation/store_details/store_details_view.dart';
 import 'package:flutter/material.dart';
 
-import '../forgot_password/forgot_password_view.dart';
-import '../login/login_view.dart';
-import '../main/main_view.dart';
-import '../onboard/view/on_boarding_view.dart';
-import '../register/register_view.dart';
-import '../splash/splash_view.dart';
-import '../store_details/store_details_view.dart';
+import '../../app/di.dart';
 
 class Routes {
   static const String splashRoute = "/";
@@ -25,13 +25,13 @@ class RouteGenerator {
       case Routes.splashRoute:
         return MaterialPageRoute(builder: (_) => const SplashView());
       case Routes.loginRoute:
+        initLoginModule();
         return MaterialPageRoute(builder: (_) => const LoginView());
       case Routes.onBoardingRoute:
         return MaterialPageRoute(builder: (_) => const OnBoardingView());
         case Routes.registerRoute:
         return MaterialPageRoute(builder: (_) => const RegisterView());
-      case Routes.forgotPasswordRoute:
-        return MaterialPageRoute(builder: (_) => const ForgotPasswordView());
+
       case Routes.mainRoute:
         return MaterialPageRoute(builder: (_) => const MainView());
       case Routes.storeDetailsRoute:

@@ -1,10 +1,10 @@
+import 'package:code/data/network/failure.dart';
+import 'package:code/data/network/requests.dart';
+import 'package:code/domain/model/models.dart';
+import 'package:code/domain/usecase/base_usecase.dart';
 import 'package:dartz/dartz.dart';
 
-import '../../data/network/failure.dart';
-import '../../data/network/requests.dart';
-import '../model/models.dart';
 import '../repository/repository.dart';
-import 'base_usecase.dart';
 
 class LoginUseCase implements BaseUseCase<LoginUseCaseInput, Authentication> {
   final Repository _repository;

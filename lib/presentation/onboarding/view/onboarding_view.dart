@@ -1,16 +1,18 @@
+import 'package:code/app/app_prefs.dart';
+import 'package:code/domain/model/models.dart';
+import 'package:code/presentation/onboarding/viewmodel/onboarding_viewmodel.dart';
+import 'package:code/presentation/resources/assets_manager.dart';
+import 'package:code/presentation/resources/color_manager.dart';
+import 'package:code/presentation/resources/routes_manager.dart';
+import 'package:code/presentation/resources/strings_manager.dart';
+import 'package:code/presentation/resources/values_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../domain/model/models.dart';
-import '../../_resources/assets_manager.dart';
-import '../../_resources/color_manager.dart';
-import '../../_resources/constants_manager.dart';
-import '../../_resources/routes_manager.dart';
-import '../../_resources/strings_manager.dart';
-import '../../_resources/values_manager.dart';
-import '../view_model/on_boarding_view_model.dart';
+import '../../../app/di.dart';
+import '../../resources/constants_manager.dart';
 
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({Key? key}) : super(key: key);
@@ -22,8 +24,10 @@ class OnBoardingView extends StatefulWidget {
 class _OnBoardingViewState extends State<OnBoardingView> {
   final PageController _pageController = PageController();
   final OnBoardingViewModel _viewModel = OnBoardingViewModel();
+  final AppPreferences _appPreferences = instance<AppPreferences>();
 
   _bind() {
+    _appPreferences.setOnBoardingScreenViewed();
     _viewModel.start();
   }
 

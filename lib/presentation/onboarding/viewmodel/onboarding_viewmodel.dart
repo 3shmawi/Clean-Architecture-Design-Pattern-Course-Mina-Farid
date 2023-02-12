@@ -1,15 +1,15 @@
 import 'dart:async';
 
-import '../../../domain/model/models.dart';
-import '../../_resources/assets_manager.dart';
-import '../../_resources/strings_manager.dart';
-import '../../base/base_view_model.dart';
+import 'package:code/domain/model/models.dart';
+
+import '../../base/baseviewmodel.dart';
+import '../../resources/assets_manager.dart';
+import '../../resources/strings_manager.dart';
 
 class OnBoardingViewModel extends BaseViewModel
     with OnBoardingViewModelInputs, OnBoardingViewModelOutputs {
   // stream controllers outputs
-  final StreamController _streamController =
-      StreamController<SliderViewObject>();
+  final StreamController _streamController = StreamController<SliderViewObject>();
   late final List<SliderObject> _list;
   int _currentIndex = 0;
 
@@ -60,34 +60,19 @@ class OnBoardingViewModel extends BaseViewModel
 
   // onboarding private functions
   void _postDataToView() {
-    inputSliderViewObject.add(SliderViewObject(
-      sliderObject: _list[_currentIndex],
-      currentIndex: _currentIndex,
-      numOfSlides: _list.length,
-    ));
+    inputSliderViewObject.add(
+        SliderViewObject(_list[_currentIndex], _list.length, _currentIndex));
   }
 
   List<SliderObject> _getSliderData() => [
-        SliderObject(
-          title: AppStrings.onBoardingTitle1,
-          image: ImageAssets.onboardingLogo1,
-          subTitle: AppStrings.onBoardingSubTitle1,
-        ),
-        SliderObject(
-          title: AppStrings.onBoardingTitle2,
-          image: ImageAssets.onboardingLogo2,
-          subTitle: AppStrings.onBoardingSubTitle2,
-        ),
-        SliderObject(
-          title: AppStrings.onBoardingTitle3,
-          image: ImageAssets.onboardingLogo3,
-          subTitle: AppStrings.onBoardingSubTitle3,
-        ),
-        SliderObject(
-          title: AppStrings.onBoardingTitle4,
-          image: ImageAssets.onboardingLogo4,
-          subTitle: AppStrings.onBoardingSubTitle4,
-        ),
+        SliderObject(AppStrings.onBoardingTitle1,
+            AppStrings.onBoardingSubTitle1, ImageAssets.onboardingLogo1),
+        SliderObject(AppStrings.onBoardingTitle2,
+            AppStrings.onBoardingSubTitle2, ImageAssets.onboardingLogo2),
+        SliderObject(AppStrings.onBoardingTitle3,
+            AppStrings.onBoardingSubTitle3, ImageAssets.onboardingLogo3),
+        SliderObject(AppStrings.onBoardingTitle4,
+            AppStrings.onBoardingSubTitle4, ImageAssets.onboardingLogo4),
       ];
 }
 

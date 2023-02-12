@@ -1,14 +1,11 @@
-// OnBoarding Models
+// onboarding models
+
 class SliderObject {
   String title;
   String subTitle;
   String image;
 
-  SliderObject({
-    required this.title,
-    required this.subTitle,
-    required this.image,
-  });
+  SliderObject(this.title, this.subTitle, this.image);
 }
 
 class SliderViewObject {
@@ -16,13 +13,10 @@ class SliderViewObject {
   int numOfSlides;
   int currentIndex;
 
-  SliderViewObject({
-    required this.sliderObject,
-    required this.numOfSlides,
-    required this.currentIndex,
-  });
+  SliderViewObject(this.sliderObject, this.numOfSlides, this.currentIndex);
 }
-// login
+
+// login models
 
 class Customer {
   String id;

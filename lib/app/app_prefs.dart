@@ -1,11 +1,6 @@
-// ignore_for_file: constant_identifier_names
-
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../presentation/resources/language_manager.dart';
-
-
-
+import '../presentation/resources/langauge_manager.dart';
 
 const String PREFS_KEY_LANG = "PREFS_KEY_LANG";
 const String PREFS_KEY_ONBOARDING_SCREEN_VIEWED =

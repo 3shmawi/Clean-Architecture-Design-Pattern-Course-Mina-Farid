@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import '../common/state_renderer/state_renderer_impl.dart';
+import 'package:code/presentation/common/state_renderer/state_renderer_impl.dart';
 
 abstract class BaseViewModel extends BaseViewModelInputs
     with BaseViewModelOutputs {
@@ -12,8 +12,7 @@ abstract class BaseViewModel extends BaseViewModelInputs
   Sink get inputState => _inputStreamController.sink;
 
   @override
-  Stream<FlowState> get outputState =>
-      _inputStreamController.stream.map((flowState) => flowState);
+  Stream<FlowState> get outputState => _inputStreamController.stream.map((flowState) => flowState);
 
   @override
   void dispose() {
